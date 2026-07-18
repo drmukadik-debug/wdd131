@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto',sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4b1178;
+    color: white;
+    padding:1rem;
+}
+
+header h1{
+    font-family: 'Merriweather',serif;
+    margin: 0;
+}
+
+#menu{
+    display: block;
+    background: none;
+    border: none;
+    color: aliceblue;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.navigation{
+    display: none;
+}
+
+.navigation.open{
+    display: block;
+}
+
+.navigation a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.navigation a:hover{
+    background: white;
+    color: #4b1178;
+    border-radius: 5px;
+}
+
+.navigation ul{
+    list-style: none;
+}
+
+.navigation li {
+    width: 100%;
+}
+
+main{
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+}
+
+main h1{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+figure{
+    border-radius: 8px;
+    padding: .5rem;
+    text-align: center;
+    background: white;
+}
+
+figcaption{
+    color: #4b1178;
+    margin-top: .5rem;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+}
+
+footer{
+    background: #4b1178;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+footer p{
+    margin: .25rem;
+}
