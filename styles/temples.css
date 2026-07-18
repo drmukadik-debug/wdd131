@@ -32,11 +32,17 @@ header h1{
 }
 
 .navigation{
-    display: none;
+    display: flex;
+    flex-direction: column;
 }
 
 .navigation.open{
     display: block;
+}
+
+.navigation.open ul{
+    display: flex;
+    flex-direction: column;
 }
 
 .navigation a {
@@ -55,6 +61,7 @@ header h1{
 }
 
 .navigation ul{
+    display: none;
     list-style: none;
 }
 
@@ -68,7 +75,7 @@ main{
     padding: 2rem;
 }
 
-main h1{
+main h2{
     text-align: center;
     margin-bottom: 1rem;
 }
