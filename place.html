@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Democratic Republic of the Congo</title>
+
+<link rel="stylesheet" href="styles/place.css">
+
+<script src="scripts/place.js" defer></script>
+
+</head>
+<body>
+
+    <header>
+        <h1>Democratic Republic of the Congo</h1>
+    </header>
+    <main>
+        <div class = "hero">
+        <picture>
+            <source srcset="images/hero-large.webp" media="(min-width:1000px)">
+            <source srcset="images/hero-medium.webp" media="(min-width:500px)">
+            <img src="images/hero-small.webp" alt="Landscape of the Democratic Republic of the Congo">
+        </picture>
+        <section class="data">
+        
+        <h2>Data</h2>
+        
+        <p><strong>Capital:</strong> Kinshasa</p>
+        <p><strong>Population:</strong> 120 million</p>
+        <p><strong>Area:</strong> 2,345,409 km²</p>
+        <p><strong>Languages:</strong> French</p>
+        <p><strong>Currency:</strong> Congolese Franc</p>
+        </section>
+
+        <section class="weather">
+        <h2>Weather</h2>
+        <img src="images/weather.svg" alt="Weather Icon" class="weather-Icon">
+        <p>Temperature:<span id="temperature"></span></p>
+        <p>Wind Speed:<span id="windSpeed"></span></p>
+        <p>Wind Chill:<span id="windChill"></span></p>
+        </section>
+
+        </div>
+    </main>
+
+<footer>
+        <p>&copy; <span id="year"></span> | Alain Mukadi Kabeya | Democratic Republic of the Congo.</p>
+        <p>Last Modified: <span id="lastModified"> </span></p>
+    </footer>
+</body>
+</html>
