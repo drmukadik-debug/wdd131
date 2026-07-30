@@ -101,3 +101,79 @@ const temples = [
   },
   
 ];
+
+const gallery = document.querySelector(".gallery");
+
+function displayTemples(templeList) {
+    gallery.innerHTML = "";
+
+    templeList.forEach((temple) => {
+        const card = document.createElement("section");
+        card.classList.add("card");
+
+        const name = document.createElement("h3");
+        name.textContent = temple.templeName;
+
+        const location = document.createElement("p");
+        location.innerHTML = `<strong>Location:</strong> ${temple.location}`;
+
+        const dedicated = document.createElement("p");
+        dedicated.innerHTML = `<strong>Dedicated:</strong> ${temple.dedicated}`;
+
+        const area = document.createElement("p");
+        area.innerHTML = `<strong>Area:</strong> ${temple.area.toLocaleString()} sq ft`;
+
+        const image = document.createElement("img");
+        image.src = temple.imageUrl;
+        image.alt = `${temple.templeName} Temple`;
+        image.loading = "lazy";
+        image.width = 400;
+        image.height = 250;
+
+        card.appendChild(name);
+        card.appendChild(location);
+        card.appendChild(dedicated);
+        card.appendChild(area);
+        card.appendChild(image);
+
+        gallery.appendChild(card);
+    });
+
+}
+
+// Display all temples on page load
+
+displayTemples(temples);
+
+document.querySelector("#home").addEventListener("click",() => {
+    displayTemples(temples);
+});
+
+document.querySelector("#home").addEventListener("click",() => {
+    displayTemples(
+        temples.filter(temples => parseInt(temple.dedicated) < 1900)
+    );
+});
+
+document.querySelector("#new").addEventListener("click",() => {
+    displayTemples(
+        temples.filter(temples => parseInt(temple.dedicated) > 2000)
+    );
+});
+
+document.querySelector("#large").addEventListener("click",() => {
+    displayTemples(
+        temples.filter(temples => parseInt(temple.area) > 90000)
+    );
+});
+
+document.querySelector("#small").addEventListener("click",() => {
+    displayTemples(
+        temples.filter(temples => parseInt(temple.area) < 10000)
+    );
+});
+
+
+
+ 
+
