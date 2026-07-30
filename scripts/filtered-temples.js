@@ -102,6 +102,7 @@ const temples = [
   
 ];
 
+const heading = document.querySelector("main h2");
 const gallery = document.querySelector(".gallery");
 
 function displayTemples(templeList) {
@@ -149,27 +150,27 @@ document.querySelector("#home").addEventListener("click",() => {
     displayTemples(temples);
 });
 
-document.querySelector("#home").addEventListener("click",() => {
+document.querySelector("#old").addEventListener("click",() => {
     displayTemples(
-        temples.filter(temples => parseInt(temple.dedicated) < 1900)
+        temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900)
     );
 });
 
 document.querySelector("#new").addEventListener("click",() => {
     displayTemples(
-        temples.filter(temples => parseInt(temple.dedicated) > 2000)
+        temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000)
     );
 });
 
 document.querySelector("#large").addEventListener("click",() => {
     displayTemples(
-        temples.filter(temples => parseInt(temple.area) > 90000)
+        temples.filter(temple => temple.area > 90000)
     );
 });
 
 document.querySelector("#small").addEventListener("click",() => {
     displayTemples(
-        temples.filter(temples => parseInt(temple.area) < 10000)
+        temples.filter(temple => temple.area < 10000)
     );
 });
 
