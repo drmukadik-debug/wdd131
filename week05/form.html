@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the beautiful house of the Lord in my country, in africa and in the world. Inspiring images and see the holy house of the Lord.">
+    <meta name="author" content="Alain Kabeya">
+
+    <title>HTML Form</title>
+
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html">
+            <label for="product">Product Name:</label>
+
+            <select id="product" name="product" required>
+                <option value="" selected disabled>Select a product</option>
+                <option value="product1">Product 1</option>
+                <option value="product2">Product 2</option>
+                <option value="product3">Product 3</option>
+            </select>
+
+            <label for="rating">Rating:</label>
+            <input type="radio" id="1" name="rating" value="1" required>
+            <label for="date">Installation Date</label>
+
+                <input type="date" id="date" name="date" required>
+                <input type="checkbox" id="durability" name="features" value="durability">
+                <textarea id="review" name="review"></textarea>
+                <input type="text" id="username" name="username" required>
+                 
+        </form>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Alain Mukadi Kabeya | Democratic Republic of the Congo.</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
