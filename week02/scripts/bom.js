@@ -3,46 +3,77 @@ const inputElement = document.querySelector('#favchap');
 const buttonElement = document.querySelector('button');
 const list = document.querySelector('#list');
 
+// Get chapters from local storage
+let chaptersArray = getChapterList() || [];
+
+// Display saved chapters on page load
+chaptersArray.forEach(chapter => {
+    displayList(chapter);
+});
+
 // Add event Listener to the aa chapter button
 
-button.addEventListener('click', function() {
+buttonElement.addEventListener("click", () => {
 
-    // Check that the input is not empty
-    if (input.value.trim() !== ''){
+    if (inputElement.value.trim() !== "") {
 
-        // Create list item
-        const li = document.createElement('li');
-        
-        // Create delete button
-        const deleteButton = document.createElement('button')
-        
-        // Set the chapter name
-        li.textContent = inputElement.value;
+        displayList(inputElement.value);
 
-        // Configure delete button
-        deleteButton.textContent = '❌';
-        deleteButton.setAttribute('aria-label', 'Remove ${input.value}');
+        chaptersArray.push(inputElement.value);
 
-        // Add delete button to List item
-        li.append(deleteButton);
+        setChapterList();
 
-        // Add List item to the unordered List
-        list.append(li);
+        inputElement.value = "";
 
-        // Delete chapter when button is clicked
-        deleteButton.addEventListener('click', function() {
-            list.removeChild(li);
-            input.focus();
-        });
-
-        // clear the input field
-        input.value = '';
-
-        // Return focus to the input field
-        input.focus();
+        inputElement.focus();
     }
-    else {
-        // Keep the cursor in the input box
-        input.focus();
-    }
+
 });
+
+// Display a chapter
+function displayList(item) {
+
+    const li = document.createElement("li");
+    const deleteButton = document.createElement("button");
+
+    li.textContent = item;
+
+    deleteButton.textContent = "❌";
+    deleteButton.classList.add("delete");
+    deleteButton.setAttribute("aria-label", `Remove ${item}`);
+
+    li.append(deleteButton);
+
+    list.append(li);
+
+    deleteButton.addEventListener("click", () => {
+        list.removeChild(li);
+        deleteChapter(li.textContent);
+        inputElement.focus();
+    });
+}
+
+// Save chapters
+function setChapterList() {
+    localStorage.setItem(
+        "myFavBOMList",
+        JSON.stringify(chaptersArray)
+    );
+}
+
+// Load chapters
+function getChapterList() {
+    return JSON.parse(
+        localStorage.getItem("myFavBOMList")
+    );
+}
+
+// Delete a chapter
+function deleteChapter(chapter) {
+
+    chapter = chapter.slice(0, chapter.length - 1);
+
+    chaptersArray = chaptersArray.filter(item => item !== chapter);
+
+    setChapterList();
+}
