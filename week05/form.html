@@ -28,21 +28,37 @@
             <label for="product">Product Name:</label>
 
             <select id="product" name="product" required>
-                <option value="" selected disabled>Select a product</option>
-                <option value="product1">Product 1</option>
-                <option value="product2">Product 2</option>
-                <option value="product3">Product 3</option>
+                <option value="" selected disabled>Select a product ...</option>
             </select>
 
-            <label for="rating">Rating:</label>
-            <input type="radio" id="1" name="rating" value="1" required>
-            <label for="date">Installation Date</label>
-
-                <input type="date" id="date" name="date" required>
-                <input type="checkbox" id="durability" name="features" value="durability">
-                <textarea id="review" name="review"></textarea>
-                <input type="text" id="username" name="username" required>
-                 
+            <fieldset>
+                <legend>Overall Rating</legend>
+                <label><input type="radio" name="rating" value="1" required> ☆</label>
+                 <label><input type="radio" name="rating" value="2"> ☆☆</label>
+                 <label><input type="radio" name="rating" value="3"> ☆☆☆</label>
+                 <label><input type="radio" name="rating" value="4"> ☆☆☆☆</label>
+                 <label><input type="radio" name="rating" value="5"> ☆☆☆☆☆</label>
+            </fieldset>
+            <fieldset>
+                <legend>Which features did you find useful?</legend>
+                <label>
+                    <input type="checkbox" name="features" value="Durability">Durability
+                </label>
+                <label>
+                    <input type="checkbox" name="features" value="Ease of Use">Ease of Use
+                </label>
+                <label>
+                    <input type="checkbox" name="features" value="Performance">Performance
+                </label>
+                <label>
+                    <input type="checkbox" name="features" value="Design">Design
+                </label>
+            </fieldset>
+            <label for="review"> Written Review</label>
+            <textarea id="review" name="review" required></textarea>
+            <label for="username">Your Name</label>
+            <input type="text" id="username" name="username" required>
+            <input type="submit" value="Post Review">
         </form>
 
     </main>
