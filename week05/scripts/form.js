@@ -1,5 +1,7 @@
 document.getElementById("currentyear").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
+document.getElementById("lastModified").textContent =
+`Last Modified: ${document.lastModified}`;
+
 
 const products = [
   {
@@ -29,10 +31,17 @@ const products = [
   }
 ];
 
-// select the dropdown List
-products.forEach((product) => {
+// populate the dropdown List
+
+const productSelect = document.querySelector("#product");
+if (productSelect) {
+  products.forEach((product) => {
   const option = document.createElement("option");
   option.value = product.id;
   option.textContent = product.name;
   productSelect.appendChild(option);
 });
+
+}
+
+

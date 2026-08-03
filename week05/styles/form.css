@@ -21,9 +21,18 @@ main {
 }
 
 form {
-    background-color: #a5bafc;
+    background-color: rgb(138, 207, 247);
     padding: 1.5rem;
     border-radius: 8px;
+    box-shadow:0 2px 8px rgba(0,0,0,.2);
+}
+
+fieldset {
+    margin: 1rem 0;
+    padding: 1 rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: rgb(138, 207, 247);
 }
 
 label {
@@ -42,7 +51,16 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    margin-bottom: 1rem;
 }
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #33047f;
+    outline-offset: 2px;
+}
+
 textarea {
     min-height: 120px;
     resize: vertical;
@@ -51,8 +69,14 @@ textarea {
 .rating {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 1rem 0;
 }
+
+.rating label {
+    margin-right: .5rem;
+}
+
 .features label {
     display: block;
     font-weight: normal;
@@ -74,6 +98,12 @@ input[type="submit"]:hover {
     background-color: #444;
 }
 
+legend {
+    font-weight: bold;
+    color: #33047f;
+    padding: 0 .5rem;
+}
+
 footer {
     background-color: #33047f;
     color: white;
@@ -81,12 +111,16 @@ footer {
     padding: 1rem;
     margin-top: 2rem;
 }
+
+footer p{
+    margin: .3rem;
+}
  
 
 @media (max-width: 600px) {
 
     main {
-        margin: 1rem;
+        padding: 1rem;
     }
 
 }
