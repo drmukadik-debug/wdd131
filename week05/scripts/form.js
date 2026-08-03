@@ -28,3 +28,11 @@ const products = [
     averagerating: 5.0
   }
 ];
+
+// select the dropdown List
+products.forEach((product) => {
+  const option = document.createElement("option");
+  option.value = product.id;
+  option.textContent = product.name;
+  productSelect.appendChild(option);
+});
