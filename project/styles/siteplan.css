@@ -1,6 +1,6 @@
 body{
 
-font-family:"Open Sans",sans-serif;
+font-family:"Roboto",sans-serif;
 
 margin:0;
 
@@ -8,6 +8,10 @@ background:#F8F9FA;
 
 color:#343A40;
 
+}
+header img{
+    max-width:150px;
+    height:auto;
 }
 
 header{
@@ -22,9 +26,27 @@ padding:20px;
 
 }
 
+nav ul{list-style-type:none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 15px 0 0;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
 h1,h2{
 
-font-family:"Poppins",sans-serif;
+font-family:"Merriweather",serif;
 
 }
 
@@ -88,4 +110,28 @@ padding:15px;
 
 margin-top:30px;
 
+}
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    pre {
+        overflow-x: auto;
+    }
 }

@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMERGENCY HEALTH AND NUTRITION ALLIANCE WEBSITE PLAN</title>
+    <title>EHNA Website Plan | WDD 131</title>
+    <meta name="description" content="This is the website plan for the Emergency Health & Nutrition Alliance (EHNA) website, outlining its purpose, scenarios, color schema, typography, and wireframe.">
+    <meta name="author" content="Alain Mukadi">
     <link rel="stylesheet" href="styles/siteplan.css">
-    <link rel="stylesheet" href="styles/siteplan-large.css">
     <script src="scripts/siteplan.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,10 +23,10 @@
         <nav class="navigation">
             <ul>
                 <li><a href="#" id="home">Home</a></li>
-                <li><a href="#" id="old">Old</a></li>
-                <li><a href="#" id="new">New</a></li>
-                <li><a href="#" id="large">Large</a></li>
-                <li><a href="#" id="small">Small</a></li>
+                <li><a href="#" id="old">About Us</a></li>
+                <li><a href="#" id="new">Services</a></li>
+                <li><a href="#" id="large">News</a></li>
+                <li><a href="#" id="small">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -49,15 +50,10 @@
         <section>
             <h2>Scenarios</h2>
             <ul>
-                <li>
-                    From volunteers: How can I volunteer with EHNA?
-                </li>
-                <li>
-                    From community members: 
-                </li>
-                <li>
-                    From Healthcare professionals: What emergency medical services does EHNA provide?
-                </li>
+                <li>How can I volunteer with EHNA?</li>
+                <li>Where can I receive emergency medical care from EHNA?</li>
+                <li>What emergency medical services does EHNA provide?</li>
+                <li>How can I partner with or support EHNA?</li>
             </ul>
          
         </section>
@@ -99,8 +95,8 @@
         <section>
             <h2>Typography</h2>
             <ul>
-                <li><strong>Poppins</strong> for headings.</li>
-                <li><strong>Open Sans</strong> for paragraph.</li>
+                <li><strong>Merriweather</strong> – Used for headings and page titles.</li>
+                <li><strong>Roboto</strong> – Used for body text, navigation, and paragraphs.</li>
             </ul>
         </section>
         <section>
@@ -163,7 +159,10 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Emergency Health Alliance</p>
+        <p> &copy; <span id="currentyear"></span> Emergency Health & Nutrition Alliance | Alain Kabeya
+        </p>
+        <p id="lastModified"></p>
+        
     </footer>
 
 </body>
